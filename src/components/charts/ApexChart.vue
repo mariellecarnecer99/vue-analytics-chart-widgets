@@ -44,9 +44,11 @@
 
 <script>
 import { VDataTableVirtual } from 'vuetify/labs/VDataTable'
+import apexchart from 'vue3-apexcharts/src/vue3-apexcharts'
 export default {
   components: {
-    VDataTableVirtual
+    VDataTableVirtual,
+    apexchart
   },
   props: {
     option: Object,
