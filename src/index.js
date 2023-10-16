@@ -1,0 +1,1 @@
+export { default as VueAnalyticsChartWidgets } from "./App.vue";
