@@ -1,21 +1,21 @@
-import http from "./base.js";
+import { axiosInstance } from '../plugins/index.js'
 
 export function getAllReports() {
-    return http.get("/reports");
+    return axiosInstance.get("/");
 }
 
 export function getReport(id) {
-    return http.get(`/reports/${id}`);
+    return axiosInstance.get(`/${id}`);
 }
 
 export function addReport(data) {
-    return http.post("/reports", data);
+    return axiosInstance.post("/", data);
 }
 
 export function updateReport(id, data) {
-    return http.put(`/reports/${id}`, data);
+    return axiosInstance.put(`/${id}`, data);
 }
 
 export function deleteReport(id) {
-    return http.delete(`/reports/${id}`);
+    return axiosInstance.delete(`/${id}`);
 }

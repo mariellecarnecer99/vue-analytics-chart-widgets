@@ -11,8 +11,12 @@ import vuetify from './vuetify'
 import router from '../router'
 import GridLayout from 'vue3-drr-grid-layout'
 import 'vue3-drr-grid-layout/dist/style.css'
+import { createAxiosInstance } from '@/services/base'
 
-export function registerPlugins (app) {
+export let axiosInstance;
+
+export function registerPlugins (app, options) {
+  axiosInstance = createAxiosInstance(options.apiUrl);
   loadFonts()
   app
     .use(vuetify)
