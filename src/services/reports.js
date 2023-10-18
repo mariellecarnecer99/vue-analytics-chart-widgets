@@ -1,21 +1,26 @@
-import { axiosInstance } from '../plugins/index.js'
+import { axiosInstance, accessToken } from '../plugins/index.js'
 
 export function getAllReports() {
-    return axiosInstance.get("/");
+    const headers = { Authorization: `Bearer ${accessToken}` };
+    return axiosInstance.get(`/`, { headers });
 }
 
 export function getReport(id) {
-    return axiosInstance.get(`/${id}`);
+    const headers = { Authorization: `Bearer ${accessToken}` };
+    return axiosInstance.get(`/${id}`, { headers });
 }
 
 export function addReport(data) {
-    return axiosInstance.post("/", data);
+    const headers = { Authorization: `Bearer ${accessToken}` };
+    return axiosInstance.post(`/`, data, { headers });
 }
 
 export function updateReport(id, data) {
-    return axiosInstance.put(`/${id}`, data);
+    const headers = { Authorization: `Bearer ${accessToken}` };
+    return axiosInstance.put(`/${id}`, data, { headers });
 }
 
 export function deleteReport(id) {
-    return axiosInstance.delete(`/${id}`);
+    const headers = { Authorization: `Bearer ${accessToken}` };
+    return axiosInstance.delete(`/${id}`, { headers });
 }

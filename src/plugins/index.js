@@ -14,9 +14,11 @@ import 'vue3-drr-grid-layout/dist/style.css'
 import { createAxiosInstance } from '@/services/base'
 
 export let axiosInstance;
+export let accessToken;
 
 export function registerPlugins (app, options) {
   axiosInstance = createAxiosInstance(options.apiUrl);
+  accessToken = options.authToken
   loadFonts()
   app
     .use(vuetify)
