@@ -5,11 +5,11 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/mfe-acw-container.umd.cjs",
+  "main": "./dist/vue-analytics-chart-widgets.umd.cjs",
   "exports": {
     ".": {
-      "import": "./dist/mfe-acw-container.js",
-      "require": "./dist/mfe-acw-container.umd.cjs"
+      "import": "./dist/vue-analytics-chart-widgets.js",
+      "require": "./dist/vue-analytics-chart-widgets.umd.cjs"
     },
     "./style.css": "./dist/style.css"
   },

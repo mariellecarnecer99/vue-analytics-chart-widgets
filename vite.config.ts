@@ -11,8 +11,8 @@ export default defineConfig({
     target: 'esnext',
     lib: {
       entry: resolve(__dirname, "src/main.js"),
-      name: "mfe-acw-container",
-      fileName: "mfe-acw-container"
+      name: "vue-analytics-chart-widgets",
+      fileName: "vue-analytics-chart-widgets"
     },
     rollupOptions: {
       external: ["vue", "vue-router"],
