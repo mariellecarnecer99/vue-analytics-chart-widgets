@@ -30,6 +30,10 @@
   ],
   "author": "Marielle Carnecer <mcarnecer@startechup.com>",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mariellecarnecer99/vue-analytics-chart-widgets"
+  },
   "dependencies": {
     "@mdi/font": "^7.2.96",
     "@vuepic/vue-datepicker": "^7.2.0",
