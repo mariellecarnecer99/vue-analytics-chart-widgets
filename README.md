@@ -4,7 +4,9 @@ A great plugin which you can fully customize different charts and be able to gen
 
 ## Demo
 
-[Have fun!](https://analytics-chart-widgets-dashboard.vercel.app)
+[Have fun!](https://vue-analytics-chart-widgets-demo.vercel.app)
+
+[https://github.com/mariellecarnecer99/vue-analytics-chart-widgets-demo](https://github.com/mariellecarnecer99/vue-analytics-chart-widgets-demo)
 
 ## Project setup
 
