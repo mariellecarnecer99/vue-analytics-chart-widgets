@@ -26,7 +26,7 @@
         size="small"
         color="primary"
         :disabled="widgets.length ? false : true"
-        @click="previewDialog = !previewDialog"
+        @click="$router.push({ path: '/preview', query: { id: $route.query?.id } })"
         >Preview Changes</v-btn
       >
       <v-dialog v-model="embedAll" width="500px">
@@ -53,7 +53,7 @@
           </v-card-text>
         </v-card>
       </v-dialog>
-      <v-dialog
+      <!-- <v-dialog
         v-model="previewDialog"
         fullscreen
         :scrim="false"
@@ -103,7 +103,7 @@
             </grid-layout>
           </v-card-text>
         </v-card>
-      </v-dialog>
+      </v-dialog> -->
       <v-btn
         variant="flat"
         size="small"
@@ -373,6 +373,7 @@ export default {
         text: ''
       }
       this.widgets.push(item)
+      store.getWidgets(this.widgets)
     },
 
     selectedChart(val) {
@@ -386,6 +387,7 @@ export default {
         selectedLib: this.selectedChartLibrary
       }
       this.widgets.push(item)
+      store.getWidgets(this.widgets)
     },
 
     handleSaveChanges() {
@@ -442,6 +444,7 @@ export default {
         .then((response) => {
           this.widgets.push(...response.data.widgets)
           this.mainTitle = response.data.name
+          store.getWidgets(this.widgets)
         })
         .catch(() => {})
         .finally()
