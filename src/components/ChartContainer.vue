@@ -41,7 +41,7 @@
             :uploadedData="item.i === specificItemId ? uploadedData : null"
             :selectedDimensions="item.i === specificItemId ? selectedDimensions : null"
             :selectedMetrics="item.i === specificItemId ? selectedMetrics : null"
-            :serviceUrl="item.i === specificItemId ? serviceUrl : null"
+            :serviceUrl="serviceUrl"
             :bgColor="item.i === specificItemId ? gridColor : null"
             :bgSwitch="item.i === specificItemId ? gridLinesSwitch : false"
             :chartFont="item.i === specificItemId ? fontType : null"
